@@ -1,0 +1,264 @@
+html {
+    background-color: #f2f2f2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #fff;
+    box-shadow: 0 0 15px -5px #000;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+header {
+    padding-bottom: 510px;
+
+
+    /* background-color: #d9ebf4; */
+    background-image: url("img/Welcome-1.png"), url("img/background_photo-min.jpg");
+    
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 134px, top center;
+    
+}
+
+.main-logo {
+    position: absolute;
+    margin-left: 531px;
+    top: 0;
+}
+
+.site-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 72px;
+    padding-left: 72px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.site-navigation li {
+    width: 264px;
+
+    padding-top: 16px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2) {
+    text-align: left;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+    text-align: right;
+}
+
+.site-navigation a {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.site-navigation a:hover {
+    color: #81b3d2;
+}
+
+.site-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+
+    padding-top: 62px;
+    padding-bottom: 33px;
+}
+
+.features p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    padding-bottom: 55px;
+}
+
+.feature-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    text-align: center;
+    list-style: none;
+}
+
+.feature-list > li:nth-child(3),
+.feature-list > li:nth-child(4),
+.feature-list > li:nth-child(5) {
+    width: 400px;
+    padding-bottom: 33px;
+    background-color: #eee;
+}
+
+.feature-item h3{
+    font-size: 21px;
+    line-height: 21px;
+
+    /* Ровняла ширину под "там есть мост дьявола". Мб /br ? */
+    width: 151px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.feature-item p{
+    font-size: 14px;
+    line-height: 21px;
+
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 27px;
+}
+
+.feature-number {
+    padding-bottom: 27px;
+}
+
+.feature-item-fhoto {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.features-fhoto img {
+    display: block;
+    object-fit: cover;
+}
+
+.features-info {
+    margin: 0;
+    padding: 0;
+    
+    background-color: #81b3d2;
+
+    color: #fff;
+}
+
+.feature-item > ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    list-style: none;
+}
+
+.feature-item li {
+    width: 400px;
+    padding-top: 115px;
+    padding-bottom: 55px;
+    /* Наверно нужно было делать эти отступы от заголовка и p, но мне было лень */
+}
+
+.feature-item li:nth-child(1) {
+    background-image: url("img/home.svg");
+    background-repeat: no-repeat;
+    background-position: 163px 60px;
+}
+
+.feature-item li:nth-child(2) {
+    background-image: url("img/food.svg");
+    background-repeat: no-repeat;
+    background-position: 163px 60px;
+}
+
+.feature-item li:nth-child(3) {
+    background-image: url("img/souvenirs.svg");
+    background-repeat: no-repeat;
+    background-position: 170px 60px;
+}
+
+.feature-list > li:first-child {
+    order: -2;
+}
+.feature-list > li:last-child {
+    order: -1;
+}
+
+.feature-number {
+    position: relative;
+}
+
+.feature-number:after,
+.feature-number:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: #000;
+}
+
+.feature-item-fhoto .feature-number:after,
+.feature-item-fhoto .feature-number:before {
+    background-color: #fff;
+}
+
+.feature-number:after {
+    top: 10px;
+    margin-left: 6px;
+}
+
+.feature-number:before {
+    top: 10px;
+    margin-left: -16px;
+}
