@@ -40,6 +40,33 @@ a {
     text-decoration: none;
 }
 
+.button {
+    display: inline-block;
+    padding: 30px 100px;
+    margin-right: 6px;
+
+    font: inherit;
+    color: #f7f4f1;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    
+    background-color: #766357;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #604e43;
+}
+
+.button:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3)
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -157,8 +184,10 @@ h1 {
 
     /* Ровняла ширину под "там есть мост дьявола". Мб /br ? */
     width: 151px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto;   Вместо инлайн-блок*/
+    text-align: center;
+    display: inline-block;
     margin-top: 45px;
     margin-bottom: 20px;
 }
@@ -261,4 +290,80 @@ h1 {
 .feature-number:before {
     top: 10px;
     margin-left: -16px;
+}
+
+
+.search-hostels b {
+    margin: 0;
+    padding: 0;
+    padding-top: 55px;
+
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+}
+
+.search-hostels p {
+    padding-top: 30px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    display: block;
+}
+
+.button-search {
+    display: block;
+    margin: 0;
+
+    box-sizing: border-box;
+    width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 120px;
+}
+
+.main-footer b {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.social-item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+    margin-right: 6px;
+}
+
+.html-academy {
+    display: flex;
+    align-items: center;
+}
+
+.html-academy p {
+    margin-right: 8px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.modal {
+    display: none;
 }
