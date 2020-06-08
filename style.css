@@ -82,7 +82,7 @@ header {
     background-image: url("img/Welcome-1.png"), url("img/background_photo-min.jpg");
     
     background-repeat: no-repeat, no-repeat;
-    background-position: center 134px, top center;
+    background-position: center 135px, top center;
     
 }
 
@@ -196,8 +196,8 @@ h1 {
     font-size: 14px;
     line-height: 21px;
 
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 27px;
 }
 
@@ -353,6 +353,19 @@ h1 {
     margin-right: 6px;
 }
 
+.social-item a:hover,
+.social-item a:focus {
+    background-color: #669ec0;
+}
+
+.social-item a:active {
+    background-color: #5496bd;
+}
+
+.social-item a:active path {
+    opacity: 0.3;
+}
+
 .html-academy {
     display: flex;
     align-items: center;
@@ -364,6 +377,30 @@ h1 {
     line-height: 26px;
 }
 
+.html-academy a:hover path,
+.html-academy a:focus path,
+.html-academy a:hover rect,
+.html-academy a:focus rect {
+    fill: #81b3d2;
+}
+
+.html-academy a:active path,
+.html-academy a:active rect {
+    fill: #bdbbbc;
+}
+
+.search-hostels-container {
+    position: relative;
+}
+
 .modal {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    
+    transform: translate(-50%);
+    left: 50%;
+
+    width: 570px;
+    height: 395px;
+    background-color: #fff;
 }
