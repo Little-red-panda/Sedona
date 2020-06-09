@@ -58,8 +58,7 @@ a {
     border: none;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     background-color: #604e43;
     cursor: pointer;
 }
@@ -336,7 +335,6 @@ h1 {
 }
 
 .modal {
-    /* display: none; */
     position: absolute;
     
     transform: translate(-50%);
@@ -345,6 +343,10 @@ h1 {
     width: 570px;
     height: 395px;
     background-color: #fff;
+}
+
+.modal-hidden {
+    display: none;
 }
 
 .search-hotels-form {
@@ -528,8 +530,7 @@ h1 {
     border: none;
 }
 
-.search-hotels-form button:hover,
-.search-hotels-form button:focus {
+.search-hotels-form button:hover {
     background-color: #669ec0;
     outline: none;
 }
