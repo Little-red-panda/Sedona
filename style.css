@@ -42,14 +42,15 @@ a {
 
 .button {
     display: inline-block;
-    padding: 30px 100px;
-    margin-right: 6px;
+    /* padding: 30px 100px; */
+    /* margin-right: 6px; */
 
     font: inherit;
     color: #f7f4f1;
     font-size: 21px;
     line-height: 26px;
     text-transform: uppercase;
+    font-weight: 700;
     text-align: center;
     vertical-align: middle;
     
@@ -60,6 +61,7 @@ a {
 .button:hover,
 .button:focus {
     background-color: #604e43;
+    cursor: pointer;
 }
 
 .button:active {
@@ -82,7 +84,7 @@ header {
     background-image: url("img/Welcome-1.png"), url("img/background_photo-min.jpg");
     
     background-repeat: no-repeat, no-repeat;
-    background-position: center 135px, top center;
+    background-position: center 134px, top center;
     
 }
 
@@ -131,6 +133,10 @@ header {
     font-weight: 700;
     font-size: 14px;
     line-height: 26px;
+}
+
+.site-navigation .current {
+    color: #766357;
 }
 
 .site-navigation a:hover {
@@ -315,12 +321,223 @@ h1 {
 
 .button-search {
     display: block;
-    margin: 0;
+    padding: 30px 100px;
+    /* margin: 0; */
 
     box-sizing: border-box;
     width: 570px;
+    height: 86px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.search-hostels-container {
+    position: relative;
+}
+
+.modal {
+    /* display: none; */
+    position: absolute;
+    
+    transform: translate(-50%);
+    left: 50%;
+
+    width: 570px;
+    height: 395px;
+    background-color: #fff;
+}
+
+.search-hotels-form {
+    margin: 0;
+    padding: 55px;
+}
+
+.search-hotels-form p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-hotels-form label {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.search-hotels-form input[type="text"] {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    
+
+    font: inherit;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+
+    box-sizing: border-box;
+    width: 346px;
+    height: 38px;
+    border: none;
+    background-color: #f2f2f2;
+    width: 346px;
+    height: 38px;
+    padding-right: 40px;
+}
+
+.group-adults input[type="text"] {
+    width: 115px;
+    height: 38px;
+    padding-left: 54px;
+    padding-right: 40px;
+}
+
+.search-hotels-form input[type="text"]:hover {
+    background-color: #ebebeb;
+}
+
+.search-hotels-form input[type="text"]:focus {
+    background-color: #fff;
+    outline: 2px solid #e5e5e5;;
+}
+
+
+.calendar {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    right: 55px;
+    margin-top: 7px; 
+}
+
+.calendar path,
+.calendar rect {
+    fill: #a9a9a9;
+}
+
+.calendar:hover path,
+.calendar:hover rect,
+.calendar:focus path,
+.calendar:focus rect {
+    fill: #000;
+}
+
+.calendar:active path,
+.calendar:active  rect {
+    fill: #81b3d2;
+}
+
+.group-adults {
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-adults p {
+    width: 229px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.child label {
+    margin-left: 53px;
+}
+
+.child,
+.adult {
+    position: relative;
+}
+
+.minus,
+.plus {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.minus {
+    left: 128px;
+}
+
+.plus {
+    left: 204px;
+}
+
+.minus::after,
+.plus::after,
+.plus::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #a9a9a9;
+}
+
+.minus::after,
+.plus::after {
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.plus::before {
+    top: 50%;
+    margin-left: -5px;
+    transform: rotate(90deg);
+}
+
+.minus:hover,
+.plus:hover {
+    cursor: pointer;
+}
+
+.minus:hover.minus::after,
+.minus:focus.minus::after {
+    background-color: #000;
+}
+
+.minus:active.minus::after {
+    background-color: #81b3d2;
+}
+
+.plus:hover.plus::after,
+.plus:focus.plus::after,
+.plus:hover.plus::before,
+.plus:focus.plus::before {
+    background-color: #000;
+}
+
+.plus:active.plus::after,
+.plus:active.plus::before {
+    background-color: #81b3d2;
+}
+
+.search-hotels-form button {
+    width: 460px;
+    height: 58px;
+    background-color: #81b3d2;
+    padding: 0;
+    border: none;
+}
+
+.search-hotels-form button:hover,
+.search-hotels-form button:focus {
+    background-color: #669ec0;
+    outline: none;
+}
+
+.search-hotels-form button:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
 }
 
 .main-footer {
@@ -389,18 +606,19 @@ h1 {
     fill: #bdbbbc;
 }
 
-.search-hostels-container {
-    position: relative;
-}
 
-.modal {
-    /* display: none; */
-    position: absolute;
+
+
+
+/* .search-hotels-form input[placeholder],
+.search-hotels-form::-webkit-input-placeholder,
+.search-hotels-form::-moz-placeholder,          
+.search-hotels-form:-moz-placeholder,           
+.search-hotels-form:-ms-input-placeholder {
+    font: inherit;
+    color: #000;
+    margin-left: 5px;
+
+} */
     
-    transform: translate(-50%);
-    left: 50%;
 
-    width: 570px;
-    height: 395px;
-    background-color: #fff;
-}
