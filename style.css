@@ -42,8 +42,6 @@ a {
 
 .button {
     display: inline-block;
-    /* padding: 30px 100px; */
-    /* margin-right: 6px; */
 
     font: inherit;
     color: #f7f4f1;
@@ -76,6 +74,10 @@ a {
 }
 
 header {
+    position: relative;
+}
+
+header.main-header {
     padding-bottom: 510px;
 
 
@@ -89,40 +91,51 @@ header {
 
 .main-logo {
     position: absolute;
-    margin-left: 531px;
+    left: 531px;
     top: 0;
+    /* left: 50%;
+    margin-left: -69px; */
 }
 
 .site-navigation {
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-right: 72px;
-    padding-left: 72px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     background-color: #fff;
 }
 
 .site-navigation li {
-    width: 264px;
+    width: 300px;
+    box-sizing: border-box;
 
     padding-top: 16px;
     padding-bottom: 14px;
     text-align: center;
 }
 
-.site-navigation li:nth-child(1),
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(1) {
     text-align: left;
+    padding-left: 72px;
 }
 
-.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(2) {
+    text-align: left;
+    padding-left: 12px;
+}
+
+.site-navigation li:nth-child(3) {
+    text-align: right;
+    padding-right: 12px;
+}
+
 .site-navigation li:nth-child(4) {
     text-align: right;
+    padding-right: 72px;
 }
 
 .site-navigation a {
@@ -153,16 +166,16 @@ h1 {
     font-size: 21px;
     line-height: 26px;
 
-    padding-top: 62px;
-    padding-bottom: 33px;
+    margin-top: 62px;
+    margin-bottom: 33px;
 }
 
-.features p {
+.features > p {
     margin: 0;
     padding: 0;
     text-align: center;
 
-    padding-bottom: 55px;
+    margin-bottom: 55px;
 }
 
 .feature-list {
@@ -197,22 +210,28 @@ h1 {
     margin-bottom: 20px;
 }
 
+.feature-number {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 27px;
+}
+
 .feature-item p{
     font-size: 14px;
     line-height: 21px;
 
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 27px;
-}
-
-.feature-number {
-    padding-bottom: 27px;
+    margin-bottom: 60px;
 }
 
 .feature-item-fhoto {
     display: flex;
     flex-wrap: nowrap;
+}
+
+.feature-item-fhoto + li{
+    flex-direction: row-reverse;
 }
 
 .features-fhoto img {
@@ -301,7 +320,7 @@ h1 {
 .search-hostels b {
     margin: 0;
     padding: 0;
-    padding-top: 55px;
+    margin-top: 55px;
 
     font-size: 30px;
     line-height: 36px;
@@ -310,22 +329,20 @@ h1 {
 }
 
 .search-hostels p {
-    padding-top: 30px;
+    margin-top: 30px;
     margin-bottom: 50px;
     font-size: 14px;
     line-height: 24px;
     text-align: center;
-    display: block;
 }
 
 .button-search {
     display: block;
     padding: 30px 100px;
-    /* margin: 0; */
 
     box-sizing: border-box;
     width: 570px;
-    height: 86px;
+    line-height: 1;
     margin-left: auto;
     margin-right: auto;
 }
@@ -343,6 +360,7 @@ h1 {
     width: 570px;
     height: 395px;
     background-color: #fff;
+    z-index: 2;
 }
 
 .modal-hidden {
@@ -462,16 +480,16 @@ h1 {
 .minus,
 .plus {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .minus {
-    left: 128px;
+    left: 118px;
 }
 
 .plus {
-    left: 204px;
+    left: 194px;
 }
 
 .minus::after,
@@ -540,6 +558,226 @@ h1 {
     color: rgba(255, 255, 255, 0.3);
     outline: none;
 }
+
+.sedona-map {
+    position: relative;
+}
+
+.sedona-map iframe {
+    position: absolute;
+    width: 1200px;
+    height: 593px;
+}
+
+
+
+
+.filters-form {
+    display: flex;
+    flex-wrap: nowrap;
+
+    color: #fff;
+    padding: 32px 72px;
+    background-image: url("img/filter_background.jpg");
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;   
+    border: none;
+    margin-right: 125px;
+}
+
+legend {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.filters-option {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.filters-option li {
+    position: relative;
+
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+
+.filters-option li:last-child {
+    padding-bottom: 3px;
+}
+
+.filters-input-checkbox + label::before {
+    position: absolute;
+
+    content: "";
+    width: 28px;
+    height: 24px;
+    left: 0px;
+    background-image: url("img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filters-input-checkbox:checked + label::after{
+    position: absolute;
+
+    content: "";
+    width: 28px;
+    height: 24px;
+    left: 0px;
+    background-image: url("img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filters-input-checkbox:hover + label {
+    cursor: pointer;
+}
+
+.cost {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.cost label {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.cost-container {
+    position: relative;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.cost-container p {
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 158px;
+    text-align: center ;
+}
+
+.cost-container::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 23px;
+    background-color: #fff;
+    left: 158px;
+    top: 5px;
+}
+
+.filter-button {
+    display: block;
+
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 2px;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+
+    padding: 5px 35px;
+    margin-top: 25px;
+    margin-left: 85px;
+}
+
+input[type="range"] {
+    width: 317px;
+}
+
+.triage {
+    display: flex;
+    padding: 30px 72px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.triage p {
+    margin-right: 50px;
+}
+
+.triage h3 {
+    margin-right: 40px;
+}
+
+.triage ul {
+    display: flex;
+    list-style: none;
+}
+
+.triage-list li {
+    margin-right: 35px;
+}
+
+.triage div {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.hotels {
+    padding-left: 50px;
+}
+
+.hotels-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* .hotels label {
+    position: relative;
+} */
+
+.input-sort-up + label::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+}
+
+.input-sort-up:checked + label::before {
+    background-color: #000;
+    
+}
+
+.input-sort-up:checked ~ .hotels-list {
+    flex-direction: column-reverse;
+}
+
+
+.hotels-list li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
 
 .main-footer {
     display: flex;
