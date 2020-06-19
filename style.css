@@ -45,8 +45,6 @@ a {
 
     font: inherit;
     color: #f7f4f1;
-    font-size: 21px;
-    line-height: 26px;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
@@ -148,6 +146,11 @@ header.main-header {
 }
 
 .site-navigation .current {
+    color: #766357;
+}
+
+.site-navigation .current:hover {
+    cursor: default;
     color: #766357;
 }
 
@@ -699,25 +702,42 @@ legend {
     margin-left: 85px;
 }
 
+.filter-button:hover,
+.filter-button:focus {
+    background-color: #fff;
+    color: #000;
+}
+
 input[type="range"] {
     width: 317px;
 }
 
 .triage {
     display: flex;
+    align-items: baseline;
     padding: 30px 72px;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .triage p {
+    margin: 0;
     margin-right: 50px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
 }
 
 .triage h3 {
+    margin: 0;
     margin-right: 40px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+
 }
 
 .triage ul {
+    margin: 0;
     display: flex;
     list-style: none;
 }
@@ -726,16 +746,33 @@ input[type="range"] {
     margin-right: 35px;
 }
 
+.triage-list a {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted #81b3d2;
+    cursor: pointer;
+}
+
+.triage-list a.current {
+    color: #81b3d2;
+    border: none;
+    cursor: default;
+}
+
 .triage div {
     margin-right: 0;
     margin-left: auto;
 }
 
 .hotels {
-    padding-left: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .hotels-list {
+    margin: 0;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -743,20 +780,43 @@ input[type="range"] {
     list-style: none;
 }
 
-/* .hotels label {
+.hotels label {
     position: relative;
-} */
+    top: -45px;
+    left: 1050px;
+    cursor: pointer;
+}
 
 .input-sort-up + label::before {
     content: "";
-    width: 10px;
-    height: 10px;
-    background-color: red;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    background-image: url("img/icon-up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.input-sort-down + label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    left: 22px;
+    background-image: url("img/icon-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
 }
 
 .input-sort-up:checked + label::before {
-    background-color: #000;
+    background-image: url("img/icon-up-dir.svg");
+    
+}
+
+.input-sort-down:checked + label::after {
+    background-image: url("img/icon-down-dir.svg");
     
 }
 
@@ -764,9 +824,106 @@ input[type="range"] {
     flex-direction: column-reverse;
 }
 
-
 .hotels-list li {
     border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    margin: 0;
+    padding: 30px 72px;
+}
+
+.hotel-image {
+    padding: 0;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+.hotel-image img {
+    display: block;
+}
+
+.hotel-info h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 21px;
+    line-height: 21px;   
+}
+
+.hotel-info p {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 21px;  
+}
+
+.hotel-info span{
+    width: 116px;
+    display: inline-block;
+}
+
+.hotels-item .button {
+    font-size: 14px;
+    line-height: 21px;
+    box-sizing: border-box;
+    padding: 8px 17px;
+    line-height: 1;
+}
+
+.button-hotels-info {
+    background-color: #81b3d2;
+    margin-right: 6px;
+}
+
+.button-hotels-info:hover {
+    background-color: #669ec0;
+}
+.button-hotels-info:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.hotel-rating {
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+}
+
+.hotel-rating p {
+    margin: 0 0 0 auto;
+    padding: 3px 0;
+    font-size: 14px;
+    line-height: 21px;
+    width: 110px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.hotel-rating span {
+    margin: 0;
+}
+
+.stars-row {
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 110px;
+    position: absolute;
+    top: -64px;
+}
+
+.stars {
+    display: block;
+
+    background-image: url("img/star.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 23px;
+    height: 17px;
+    
+
 }
 
 

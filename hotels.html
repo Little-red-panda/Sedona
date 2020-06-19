@@ -16,10 +16,10 @@
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
                 <li><a href="#">Карта штата</a></li>
-                <li><a href="hotels.html">Гостиницы</a></li>
+                <li><a href="#" class="current">Гостиницы</a></li>
             </ul>
         </nav>
-        <img src="img/index-logo.png" class="main-logo" width="138" height="70" alt="Логотип">
+        <a href="index.html"><img src="img/index-logo.png" class="main-logo" width="138" height="70" alt="Логотип"></a>
     </header>
 
     <main class="container">
@@ -86,7 +86,7 @@
                 <h3>Сортировка:</h3>
                 <ul class="triage-list">
                     <li class="triage-item">
-                        <a class="triage-link">По цене</a>
+                        <a class="triage-link current">По цене</a>
                     </li>
                     <li class="triage-item">
                         <a class="triage-link">По типу</a>
@@ -95,68 +95,87 @@
                         <a class="triage-link">По рейтингу</a>
                     </li>
                 </ul>
-                <!-- <div>
-                    <label for="up" class="visually-hidde">Вверх</label>
-                    <input type="radio" id="up" name="sort" class="input-sort input-sort-up">
-                    <label for="down" class="visually-hidde">Вниз</label>
-                    <input type="radio" id="down" name="sort" class="input-sort input-sort-down" checked>
-                </div> -->
-
             </div>
 
             <div class="hotels">
-                <label for="up" class="visually-hidde">Вверх</label>
-                <input type="radio" id="up" name="sort" class="input-sort input-sort-up">
-                <label for="down" class="visually-hidde">Вниз</label>
-                <input type="radio" id="down" name="sort" class="input-sort input-sort-down" checked>
+                
+                <input type="radio" id="up" name="sort" class="input-sort input-sort-up visually-hidden">
+                <label for="up" class="visually-hidde"></label>
+                
+                <input type="radio" id="down" name="sort" class="input-sort input-sort-down visually-hidden" checked>
+                <label for="down" class="visually-hidde"></label>
                 <h2 class="visually-hidden">Гостиницы</h2>
                 <ul class="hotels-list">
                     <li class="hotels-item">
-                        <h3>Amara Resort & Spa</h3>
-                        <p class="hotel-info">
-                            <span class="hotel-category">Гостиница</span>
-                            <span class="hotel-price">от 4000 Р.</span>
-                            <span class="hotel-rating">Рейтинг: 8,5</span>
-                        </p>
-                        <p class="hotel-booking">
-                            <a class="button button-info" href="#">Подробнее</a>
-                            <a class="button button-booking" href="#">Забронировать</a>
-                        </p>
-                        <p class="hotel-image">
+                        <div class="hotel-rating">
+                            <div class="stars-row">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+                            <p>Рейтинг: <span class="rating">8,5</span></p>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Amara Resort & Spa</h3>
+                            <p>
+                                <span>Гостиница</span>
+                                <span>от 4000 Р.</span>
+                            </p>
+                            
+                            <a class="button button-hotels-info" href="#">Подробнее</a>
+                            <a class="button button-hotels-booking" href="#">Забронировать</a>
+                        </div>
+                        <div class="hotel-image">
                             <img src="img/hotel-1.jpg" width="135" height="90" alt="Изображение гостиницы">
-                        </p>
+                        </div>
                     </li>
 
                     <li class="hotels-item">
-                        <h3>Desert Quail Inn</h3>
-                        <p class="hotel-info">
-                            <span class="hotel-category">Мотель</span>
-                            <span class="hotel-price">от 3000 Р.</span>
-                            <span class="hotel-rating">Рейтинг: 8,9</span>
-                        </p>
-                        <p class="hotel-booking">
-                            <a class="button button-info" href="#">Подробнее</a>
-                            <a class="button button-booking" href="#">Забронировать</a>
-                        </p>
-                        <p class="hotel-image">
+                        <div class="hotel-rating">
+                            <div class="stars-row">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+                            <p class="hotel-rating">Рейтинг: <span class="rating">8,9</span></p>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Desert Quail Inn</h3>
+                            <p>
+                                <span>Мотель</span>
+                                <span>от 3000 Р.</span>
+                            </p>
+                            
+                            <a class="button button-hotels-info" href="#">Подробнее</a>
+                            <a class="button button-hotels-booking" href="#">Забронировать</a>
+                        </div>
+                        <div class="hotel-image">
                             <img src="img/hotel-2.jpg" width="135" height="90" alt="Изображение гостиницы">
-                        </p>
+                        </div>
                     </li>
 
                     <li class="hotels-item">
-                        <h3>Villas at Poco Diablo</h3>
-                        <p class="hotel-info">
-                            <span class="hotel-category">Апартаменты</span>
-                            <span class="hotel-price">от 2000 Р.</span>
-                            <span class="hotel-rating">Рейтинг: 9,2</span>
-                        </p>
-                        <p class="hotel-booking">
-                            <a class="button button-info" href="#">Подробнее</a>
-                            <a class="button button-booking" href="#">Забронировать</a>
-                        </p>
-                        <p class="hotel-image">
+                        <div class="hotel-rating">
+                            <div class="stars-row">
+                                <span class="stars"></span>
+                                <span class="stars"></span>
+                            </div>
+                            <p class="hotel-rating">Рейтинг: <span class="rating">9,2</span></p>
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Villas at Poco Diablo</h3>
+                            <p>
+                                <span>Апартаменты</span>
+                                <span>от 2000 Р.</span>
+                            </p>
+                            
+                            <a class="button button-hotels-info" href="#">Подробнее</a>
+                            <a class="button button-hotels-booking" href="#">Забронировать</a>
+                        </div>
+                        <div class="hotel-image">
                             <img src="img/hotel-3.jpg" width="135" height="90" alt="Изображение гостиницы">
-                        </p>
+                        </div>
                     </li>
                 </ul>
             </div>
